@@ -11,8 +11,8 @@
 // If `isLive: false`, clicking any apply button triggers the interactive
 // "Candidatures Bientôt Ouvertes" early-access modal.
 window.APPLICATION_CONFIG = {
-  isLive: false,
-  formUrl: 'https://forms.gle/CentraleTechCandidature2026', // Placeholder URL
+  isLive: true,
+  formUrl: 'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=eF-Del-2XEmV2BIjjDk9eiSMIvigBCxFiZrnXrNQQRRUOVRHVVczU0ZSNFU5RkdISkM4Szc0VDZQSy4u',
   mandateYear: '2026-2027'
 };
 
