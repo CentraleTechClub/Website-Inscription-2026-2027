@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CentraleTech — Hub d'Innovation & Prototypage | Recrutement 2026-2027</title>
+  <meta name="description" content="Rejoins CentraleTech à l'École Centrale Casablanca. Découvre les 4 pôles d'excellence ouverts au recrutement : Robotique, Data & IA, Design & Dev Web, et Cybersécurité.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23080c14'/><path d='M30 35 L70 35 M50 35 L50 75' stroke='%2300f5d4' stroke-width='10' stroke-linecap='round'/><circle cx='50' cy='35' r='8' fill='%2300bbf9'/></svg>">
+  
+  <!-- Google Fonts: Space Grotesk, Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Glowing Orbs & Interactive Particle Canvas -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <div class="ambient-glow ambient-glow-3"></div>
+
+  <!-- ==========================================================================
+       Header / Navigation Bar
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo">
+        <div class="logo-badge">CT</div>
+        <div class="brand-text">
+          <span class="brand-title">CENTRALETECH</span>
+          <span class="brand-sub">École Centrale Casablanca</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Accueil</a></li>
+          <li><a href="#poles" class="nav-link">Les 4 Pôles</a></li>
+          <li><a href="#ecosystem" class="nav-link">Pourquoi Nous ?</a></li>
+          <li><a href="#roadmap" class="nav-link">Projets 26-27</a></li>
+          <li><a href="#team" class="nav-link">Gouvernance</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Prominent Placeholder Button in Header -->
+        <button class="btn btn-primary btn-sm btn-glow js-open-apply-modal" id="nav-apply-btn">
+          <span>🚀 Postuler au Club</span>
+        </button>
+        <button class="nav-toggle-btn" aria-label="Menu Mobile">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="pulse-badge">
+            <span class="pulse-dot"></span>
+            <span>MANDAT 2026-2027 • RECRUTEMENT PROMO 1A & 2A</span>
+          </div>
+
+          <h1 class="hero-title">
+            L'Hub d'Innovation & de <span class="gradient-text">Prototypage</span> de l'ECC
+          </h1>
+
+          <p class="hero-description">
+            <em>« The new road to your TECH-PRO world. »</em> Transforme ta curiosité d'ingénieur en réalisations concrètes : de la fabrication de robots de compétition aux architectures de trading temps réel, en passant par les modèles d'IA prédictifs et les défis offensifs en cybersécurité.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#poles" class="btn btn-primary btn-lg btn-glow">
+              <span>🌟 Découvrir les 4 Pôles</span>
+            </a>
+            
+            <!-- Primary Hero Application Placeholder Button -->
+            <button class="btn btn-secondary btn-lg js-open-apply-modal" id="hero-apply-btn">
+              <span>📝 Postuler à la Sélection</span>
+            </button>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Pôles d'Excellence</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">29</span>
+              <span class="stat-label">Membres Actifs & Mentors</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">1</span>
+              <span class="stat-label">Mini-FabLab Dédié</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Projets Pratiques</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="glass-showcase-card">
+            <div class="showcase-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="terminal-title">organigramme_executif_26-27.jpg</span>
+            </div>
+            <img 
+              src="assets/images/organigramme_hd.jpg" 
+              alt="Organigramme Officiel CentraleTech 2026-2027" 
+              class="showcase-preview-img js-zoomable-img"
+              data-full-src="assets/images/organigramme_hd.jpg"
+              title="Clique pour agrandir l'organigramme en haute définition"
+            >
+            <div class="showcase-caption">
+              <span class="badge-live">● Bureau Officiellement Confirmé</span>
+              <span style="color: var(--text-muted); font-size: 0.8rem;">Clique pour zoomer 🔍</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       The 4 Technical Poles (Recruitment Core Section)
+       ========================================================================== -->
+  <section class="poles-section" id="poles">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// DOMAINES D'EXPERTISE</span>
+        <h2 class="section-title">Les 4 Pôles Techniques Ouverts au Recrutement</h2>
+        <p class="section-desc">
+          Chaque étudiant de première ou deuxième année peut candidater pour intégrer l'un de nos quatre pôles techniques. Choisi la spécialité où tu veux développer des compétences industrielles de haut niveau.
+        </p>
+      </div>
+
+      <!-- Interactive Filter Tabs -->
+      <div class="pole-nav-tabs">
+        <button class="pole-tab-btn active" data-target="all">⚡ Tous les Pôles (4)</button>
+        <button class="pole-tab-btn" data-target="robotique">🤖 Robotique & FabLab</button>
+        <button class="pole-tab-btn" data-target="data-ia">🧠 Data & IA</button>
+        <button class="pole-tab-btn" data-target="dev-web">💻 Design & Dev Web</button>
+        <button class="pole-tab-btn" data-target="cyber">🛡️ Cybersécurité</button>
+      </div>
+
+      <!-- Poles Grid -->
+      <div class="poles-grid">
+
+        <!-- ==================== PÔLE 1: ROBOTIQUE ==================== -->
+        <article class="pole-card theme-robotique" data-pole="robotique">
+          <div class="pole-card-header">
+            <div class="pole-icon-wrapper">🤖</div>
+            <span class="pole-status-badge">RECRUTEMENT ACTIF</span>
+          </div>
+
+          <h3 class="pole-name">Pôle Robotique & Systèmes Embarqués</h3>
+          <div class="pole-motto">« De la modélisation CAO au circuit imprimé et à l'arène de tournoi. »</div>
+          
+          <p class="pole-description">
+            Le pôle Robotique est le cœur matériel de CentraleTech. Il conçoit, usine, assemble et programme des robots autonomes taillés pour triompher lors des compétitions nationales (ARB, tournois inter-écoles) et prépare le grand événement <strong>TechDay</strong> de l'ECC.
+          </p>
+
+          <!-- Slide Preview Thumbnail -->
+          <div class="pole-slide-preview js-zoomable-img" data-full-src="assets/images/poles/pole_robotique.png">
+            <img src="assets/images/poles/pole_robotique.png" alt="Équipe Pôle Robotique CentraleTech">
+            <div class="pole-slide-overlay">
+              <span class="slide-overlay-text">🔍 Agrandir l'affiche du Pôle Robotique</span>
+            </div>
+          </div>
+
+          <div class="pole-leads-box">
+            <div class="leads-label">RESPONSABLES DU PÔLE</div>
+            <div class="leads-names">
+              <span>Ahmad Moubarak TIEMTORE</span> (Lead) • <span>Yahya BARHOUN</span> (Co-Lead) • <span>Imane EL BANNOUNI</span>
+            </div>
+          </div>
+
+          <ul class="pole-highlights">
+            <li>
+              <span class="check-icon">✔</span>
+              <div><strong>Conception 3D & Fabrication :</strong> SolidWorks, Fusion 360, Impression 3D filament/résine et découpe laser au Mini-FabLab.</div>
+            </li>
+            <li>
+              <span class="check-icon">✔</span>
+              <div><strong>Électronique Avancée (PCBs) :</strong> Fini les plaques d'essai fragiles — conception de circuits imprimés custom sur KiCAD.</div>
+            </li>
+            <li>
+              <span class="check-icon">✔</span>
+              <div><strong>Contrôle & Automatique :</strong> Régulateurs PID, Filtres de Kalman pour la fusion de capteurs, contrôle prédictif et évitement d'obstacles.</div>
+            </li>
+            <li>
+              <span class="check-icon">✔</span>
+              <div><strong>Rythme de Compétition :</strong> 2 à 3 équipes autonomes avec un calendrier de compétitions régulières (tous les deux mois).</div>
+            </li>
+          </ul>
+
+          <div class="tech-stack-container">
+            <div class="tech-stack-title">STACK TECHNIQUE DU PÔLE</div>
+            <div class="tech-badges">
+              <span class="tech-badge">ROS 2</span>
+              <span class="tech-badge">C / C++</span>
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">KiCAD (PCB)</span>
+              <span class="tech-badge">SolidWorks</span>
+              <span class="tech-badge">Fusion 360</span>
+              <span class="tech-badge">STM32 / Arduino</span>
+              <span class="tech-badge">Filtres de Kalman</span>
+            </div>
+          </div>
+
+          <div class="pole-actions">
+            <button class="btn btn-primary btn-sm js-open-apply-modal" data-pole="Robotique">
+              <span>🚀 Postuler en Robotique</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- ==================== PÔLE 2: DATA & IA ==================== -->
+        <article class="pole-card theme-data" data-pole="data-ia">
+          <div class="pole-card-header">
+            <div class="pole-icon-wrapper">🧠</div>
+            <span class="pole-status-badge">RECRUTEMENT ACTIF</span>
+          </div>
+
+          <h3 class="pole-name">Pôle Data & Intelligence Artificielle</h3>
+          <div class="pole-motto">« Modélisation statistique rigoureuse, Deep Learning et IA générative appliquée. »</div>
+          
+          <p class="pole-description">
+            Le pôle Data & IA forme des ingénieurs capables de dompter les données complexes, d'entraîner des modèles prédictifs haute performance et de déployer des architectures modernes (RAG, Séries Temporelles, Computer Vision) dans des cas d'usage réels et financiers.
+          </p>
+
+          <!-- Slide Preview Thumbnail -->
+          <div class="pole-slide-preview js-zoomable-img" data-full-src="assets/images/poles/pole_data_ia.png">
+            <img src="assets/images/poles/pole_data_ia.png" alt="Équipe Pôle Data & IA CentraleTech">
+            <div class="pole-slide-overlay">
+              <span class="slide-overlay-text">🔍 Agrandir l'affiche du Pôle Data & IA</span>
+            </div>
+          </div>
+
+          <div class="pole-leads-box">
+            <div class="leads-label">RESPONSABLES DU PÔLE</div>
+            <div class="leads-names">
+              <span>Mouad EL KHAILI</span> (Lead) • <span>Allaoui Mohamed El MEHDI</span> (Co-Lead) • Mame Lesse FAYE, Hadri Ahmed AMINE, Sennah HAMZA
+            </div>
+          </div>
+
+          <ul class="pole-highlights">
+            <li>
+              <span class="check-icon">✔</span>
+              <div><strong>Projet Mock Trading & Séries Temporelles :</strong> Prédiction de cours boursiers avec modèles ARIMA et réseaux neuronaux récurrents (LSTM).</div>
+            </li>
+            <li>
+              <span class="check-icon">✔</span>
+              <div><strong>IA Générative & RAG Pipelines :</strong> Découpage vectoriel, chunking intelligent et embeddings pour la recherche instantanée dans les corpus académiques.</div>
+            </li>
+            <li>
+              <span class="check-icon">✔</span>
+              <div><strong>Datathons & Hackathons :</strong> Équipes dédiées aux compétitions nationales de Machine Learning et Computer Vision.</div>
+            </li>
+            <li>
+              <span class="check-icon">✔</span>
+              <div><strong>Triple Séminaire Financier :</strong> Conférences techniques et algorithmiques co-organisées avec les clubs financiers de l'ECC.</div>
+            </li>
+          </ul>
+
+          <div class="tech-stack-container">
+            <div class="tech-stack-title">STACK TECHNIQUE DU PÔLE</div>
+            <div class="tech-badges">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">PyTorch</span>
+              <span class="tech-badge">TensorFlow</span>
+              <span class="tech-badge">Scikit-Learn</span>
+              <span class="tech-badge">LangChain</span>
+              <span class="tech-badge">Pandas / NumPy</span>
+              <span class="tech-badge">Hugging Face</span>
+              <span class="tech-badge">Vector DBs</span>
+            </div>
+          </div>
+
+          <div class="pole-actions">
+            <button class="btn btn-primary btn-sm js-open-apply-modal" data-pole="Data & IA">
+              <span>🧠 Postuler en Data & IA</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- ==================== PÔLE 3: DEV WEB ==================== -->
+        <article class="pole-card theme-web" data-pole="dev-web">
+          <div class="pole-card-header">
+            <div class="pole-icon-wrapper">💻</div>
+            <span class="pole-status-badge">RECRUTEMENT ACTIF</span>
+          </div>
+
+          <h3 class="pole-name">Pôle Design & Développement Web</h3>
+          <div class="pole-motto">« Architectures scalables, expériences temps réel et interfaces utilisateur d'élite. »</div>
+          
+          <p class="pole-description">
+            Ce pôle regroupe les développeurs Full-Stack et designers UI/UX de CentraleTech. Nous construisons les plateformes interactives du campus, gérons les architectures temps réel et inculquons les standards professionnels de développement collaboratif sur Git.
+          </p>
+
+          <!-- Slide Preview Thumbnail -->
+          <div class="pole-slide-preview js-zoomable-img" data-full-src="assets/images/poles/pole_dev_web.png">
+            <img src="assets/images/poles/pole_dev_web.png" alt="Équipe Pôle Design & Dev Web CentraleTech">
+            <div class="pole-slide-overlay">
+              <span class="slide-overlay-text">🔍 Agrandir l'affiche du Pôle Dev Web</span>
+            </div>
+          </div>
+
+          <div class="pole-leads-box">
+            <div class="leads-label">RESPONSABLES DU PÔLE</div>
+            <div class="leads-names">
+              <span>Aymen LAOUINA</span> (Lead) • <span>Zhour MESKOUR</span> (Co-Lead) • Cheikh Ahmed Tidiane Sarr NDIAYE (Projet Centrale Hub)
+            </div>
+          </div>
+
+          <ul class="pole-highlights">
+            <li>
+              <span class="check-icon">✔</span>
+              <div><strong>Projet Mock Trading Platform :</strong> Développement d'une plateforme boursière temps réel avec WebSockets, graphiques dynamiques et APIs REST.</div>
+            </li>
+            <li>
+              <span class="check-icon">✔</span>
+              <div><strong>Standards Git & Collaboration :</strong> Résolution de conflits complexes, branching workflows, PR reviews et CI/CD automatisé.</div>
+            </li>
+            <li>
+              <span class="check-icon">✔</span>
+              <div><strong>Sprints Open-Source :</strong> Sessions collectives pour contribuer à de vrais dépôts open-source et bâtir un profil GitHub vérifiable.</div>
+            </li>
+            <li>
+              <span class="check-icon">✔</span>
+              <div><strong>UI/UX de Haut Niveau :</strong> Prototypage Figma, design systems avancés et maîtrise des frameworks modernes (React, Next.js, Tailwind).</div>
+            </li>
+          </ul>
+
+          <div class="tech-stack-container">
+            <div class="tech-stack-title">STACK TECHNIQUE DU PÔLE</div>
+            <div class="tech-badges">
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">Next.js</span>
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">WebSockets</span>
+              <span class="tech-badge">TailwindCSS</span>
+              <span class="tech-badge">Git & GitHub</span>
+              <span class="tech-badge">Figma</span>
+            </div>
+          </div>
+
+          <div class="pole-actions">
+            <button class="btn btn-primary btn-sm js-open-apply-modal" data-pole="Design & Dev Web">
+              <span>💻 Postuler en Dev Web</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- ==================== PÔLE 4: CYBERSÉCURITÉ ==================== -->
+        <article class="pole-card theme-cyber" data-pole="cyber">
+          <div class="pole-card-header">
+            <div class="pole-icon-wrapper">🛡️</div>
+            <span class="pole-status-badge">RECRUTEMENT ACTIF</span>
+          </div>
+
+          <h3 class="pole-name">Pôle Cybersécurité</h3>
+          <div class="pole-motto">« Maîtriser l'attaque pour forger la défense. Éthique, rigueur et investigation. »</div>
+          
+          <p class="pole-description">
+            Le pôle Cybersécurité plonge ses recrues dans l'univers de la sécurité offensive et défensive. De l'audit de vulnérabilités aux compétitions internationales de CTF (Capture The Flag), les membres apprennent à tester et blinder les systèmes informatiques.
+          </p>
+
+          <!-- Slide Preview Thumbnail -->
+          <div class="pole-slide-preview js-zoomable-img" data-full-src="assets/images/poles/pole_cybersecurite.png">
+            <img src="assets/images/poles/pole_cybersecurite.png" alt="Équipe Pôle Cybersécurité CentraleTech">
+            <div class="pole-slide-overlay">
+              <span class="slide-overlay-text">🔍 Agrandir l'affiche du Pôle Cybersécurité</span>
+            </div>
+          </div>
+
+          <div class="pole-leads-box">
+            <div class="leads-label">RESPONSABLES DU PÔLE</div>
+            <div class="leads-names">
+              <span>Elise COULIBALY</span> (Lead) • <span>Imad ZOUHAIR</span> (Co-Lead) • Yeints Andi Abdoulaziz LANKOUANDE, Ivan Emmanuel Rabe MALEU
+            </div>
+          </div>
+
+          <ul class="pole-highlights">
+            <li>
+              <span class="check-icon">✔</span>
+              <div><strong>CTF Compétitions :</strong> Entraînement et alignement d'équipes sur les compétitions Capture The Flag universitaires et internationales.</div>
+            </li>
+            <li>
+              <span class="check-icon">✔</span>
+              <div><strong>Web Security & Pentesting :</strong> Analyse de failles OWASP Top 10 (SQLi, XSS, SSRF), interception de trafic et tests d'intrusion éthiques.</div>
+            </li>
+            <li>
+              <span class="check-icon">✔</span>
+              <div><strong>Reverse Engineering & Crypto :</strong> Analyse de binaires compilés, décompilation et décryptage de protocoles cryptographiques.</div>
+            </li>
+            <li>
+              <span class="check-icon">✔</span>
+              <div><strong>Hardening & Infrastructures :</strong> Sécurisation des serveurs du club et mise en place de containers Docker isolés pour les challenges.</div>
+            </li>
+          </ul>
+
+          <div class="tech-stack-container">
+            <div class="tech-stack-title">STACK TECHNIQUE DU PÔLE</div>
+            <div class="tech-badges">
+              <span class="tech-badge">Kali Linux</span>
+              <span class="tech-badge">Wireshark</span>
+              <span class="tech-badge">Burp Suite</span>
+              <span class="tech-badge">Metasploit</span>
+              <span class="tech-badge">Ghidra</span>
+              <span class="tech-badge">Docker</span>
+              <span class="tech-badge">Python Security</span>
+              <span class="tech-badge">Linux Hardening</span>
+            </div>
+          </div>
+
+          <div class="pole-actions">
+            <button class="btn btn-primary btn-sm js-open-apply-modal" data-pole="Cybersécurité">
+              <span>🛡️ Postuler en Cybersécurité</span>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Why Join CentraleTech? (Ecosystem & Unique Value Proposition)
+       ========================================================================== */
+  <section class="ecosystem-section" id="ecosystem">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// L'ÉCOSYSTÈME CENTRALETECH</span>
+        <h2 class="section-title">Pourquoi Rejoindre CentraleTech en 2026-2027 ?</h2>
+        <p class="section-desc">
+          Intégrer CentraleTech n'est pas simplement rejoindre un club étudiant : c'est un accélérateur de carrière technique, de leadership et d'ingénierie appliquée.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-box">🎯</div>
+          <h3 class="feature-title">Programme de Mentorat 1-to-1</h3>
+          <p class="feature-desc">
+            Chaque nouvel étudiant (1A) est parrainé par un membre du Bureau Exécutif pour assurer un suivi personnalisé, une progression technique rapide et un équilibre parfait avec les cours.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">🏭</div>
+          <h3 class="feature-title">Accès Privilégié au Mini-FabLab</h3>
+          <p class="feature-desc">
+            Bénéficie d'un accès aux équipements de fabrication numérique : Imprimantes 3D, Découpeuse Laser 2D, stations de soudure électronique et composants de prototypage rapide.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">🏆</div>
+          <h3 class="feature-title">Compétitions Nationales & Hackathons</h3>
+          <p class="feature-desc">
+            Nous participons régulièrement aux compétitions de robotique (ARB), tournois CTF de cybersécurité et datathons IA pour faire rayonner les couleurs de l'ECC à l'échelle nationale.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">⭐</div>
+          <h3 class="feature-title">Système de Mérite & Carrière</h3>
+          <p class="feature-desc">
+            Une gouvernance transparente récompensant l'assiduité, les livraisons de code et la prise d'initiative, avec un accès direct aux responsabilités de Lead et au Bureau Exécutif pour le mandat suivant.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">💼</div>
+          <h3 class="feature-title">Réseau Industriel & Sponsors</h3>
+          <p class="feature-desc">
+            Rencontre des ingénieurs d'entreprises partenaires (BMCI, UGCF, industriels), échange avec les anciens élèves de Centrale Casablanca et bénéficie de recommandations concrètes.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">💡</div>
+          <h3 class="feature-title">Failure Fridays & Culture Open-Source</h3>
+          <p class="feature-desc">
+            Un rituel régulier pour partager des bugs et des échecs techniques en toute bienveillance, complété par des sprints collectifs de contribution open-source sur GitHub.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Flagship Projects & Timeline
+       ========================================================================== -->
+  <section class="projects-section" id="roadmap">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// FEUILLE DE ROUTE DU MANDAT</span>
+        <h2 class="section-title">Les Grands Rendez-Vous du Mandat 2026-2027</h2>
+        <p class="section-desc">
+          Une année rythmée par des projets ambitieux et des livraisons concrètes.
+        </p>
+      </div>
+
+      <div class="timeline-cards-grid">
+        <div class="timeline-card">
+          <span class="timeline-tag">SEPTEMBRE - OCTOBRE</span>
+          <h3 class="timeline-title">Bootcamps d'Intégration</h3>
+          <p class="timeline-desc">
+            Sessions intensives pour toutes les recrues : Git/GitHub, modélisation CAO, bases des réseaux de neurones, sécurité web et initiation au Mini-FabLab.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <span class="timeline-tag">NOVEMBRE - DÉCEMBRE</span>
+          <h3 class="timeline-title">Mock Trading & Datathon</h3>
+          <p class="timeline-desc">
+            Collaboration Dev Web et Data & IA : déploiement d'une plateforme de trading boursier simulé en temps réel et duel d'algorithmes prédictifs.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <span class="timeline-tag">JANVIER - MARS</span>
+          <h3 class="timeline-title">Tournois Robotiques ARB</h3>
+          <p class="timeline-desc">
+            Alignement de 2 à 3 équipes de robots autonomes dans les arènes nationales de compétition, avec navigation avancée et évitement d'obstacles.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <span class="timeline-tag">AVRIL - MAI</span>
+          <h3 class="timeline-title">Le Grand TechDay ECC</h3>
+          <p class="timeline-desc">
+            Événement phare de l'école accueillant plus de 200 participants, sponsors industriels, compétitions de robots sur pistes dédiées et démonstrations IA.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Leadership & Governance Showcase
+       ========================================================================== -->
+  <section class="team-section" id="team">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// GOUVERNANCE & STRUCTURE</span>
+        <h2 class="section-title">L'Équipe Dirigeante CentraleTech</h2>
+        <p class="section-desc">
+          Une gouvernance structurée pour encadrer, accompagner et propulser chaque nouveau membre vers l'excellence technique.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Bureau Exécutif -->
+        <div class="team-banner-card">
+          <img 
+            src="assets/images/team/bureau_executif.png" 
+            alt="Bureau Exécutif CentraleTech 2026-2027" 
+            class="team-banner-img js-zoomable-img"
+            data-full-src="assets/images/team/bureau_executif.png"
+            title="Clique pour agrandir"
+          >
+          <div class="team-banner-content">
+            <h3 class="team-banner-title">Le Bureau Exécutif 2026-2027</h3>
+            <p class="team-banner-desc">
+              <strong>Anwar MOUNIR</strong> (Président) • <strong>Yahya EL OMARI</strong> (Vice-Président) • <strong>Aya KHABIR</strong> (Coordination des Pôles) • <strong>Tawba BENZAYED</strong> (Trésorière) • <strong>Omar OUAJIF</strong> (SG Rédaction & Archivage) • <strong>Daniela ZOUNGRANA</strong> (SG Administratif & Relations École).
+            </p>
+          </div>
+        </div>
+
+        <!-- Pôles Opérationnels & Support -->
+        <div class="team-banner-card">
+          <img 
+            src="assets/images/organigramme_complet.png" 
+            alt="Pôles Opérationnels et Écosystème CentraleTech" 
+            class="team-banner-img js-zoomable-img"
+            data-full-src="assets/images/organigramme_hd.jpg"
+            title="Clique pour voir l'organigramme complet"
+          >
+          <div class="team-banner-content">
+            <h3 class="team-banner-title">Pôles Opérationnels & Logistique</h3>
+            <p class="team-banner-desc">
+              Soutenus par le pôle <strong>Communication & Stratégie</strong> (Mohamoudou SANOGO, Papy NANA, Ichrak EL MAKSSOUD, Mohammed CHBAB, Khaoula ZERZBANE) et le pôle <strong>Prospection & Logistique</strong> (Amine ZAKANI, Nassirou DIALLO, Laila EL ARARI, Abdessadik CHAHBOUNE).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Recruitment FAQ Section
+       ========================================================================== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// QUESTIONS FRÉQUENTES</span>
+        <h2 class="section-title">Tout Ce Que Tu Dois Savoir Pour Postuler</h2>
+        <p class="section-desc">
+          Tu hésites encore ? Voici les réponses aux questions les plus courantes des futurs candidats.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>Dois-je déjà être un expert technique pour postuler ?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <strong>Absolument pas !</strong> Nous accordons une importance capitale à la curiosité, à l'envie d'apprendre et à la rigueur de travail. Nos cycles de formation (bootcamps) et notre système de mentorat 1-to-1 sont spécialement conçus pour former les élèves-ingénieurs de première année dès leur intégration.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Puis-je postuler à plusieurs pôles ?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Oui ! Le formulaire officiel te permettra de classer les pôles par ordre de préférence (du 1er au 4ème choix). Lors des entretiens de sélection, le jury évaluera ton affinité technique pour te placer dans le pôle où tu pourras t'épanouir au maximum.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Comment se déroule le processus de recrutement ?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Le processus comprend 2 étapes rapides :<br>
+            1. <strong>Le formulaire de candidature :</strong> Remplissage de tes informations et motivations.<br>
+            2. <strong>L'entretien de 15 minutes :</strong> Une courte entrevue structurée avec le Bureau et les Leads du pôle pour discuter de tes motivations, de ton esprit d'équipe et de ta disponibilité.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Combien d'heures par semaine dois-je consacrer au club ?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            En moyenne, nous recommandons entre <strong>3 et 5 heures par semaine</strong> (ateliers, projets, réunions de synchronisation). Nous savons que les études à l'ECC sont exigeantes, et nos mentors veillent à ce que ton engagement au club soit compatible avec ta réussite académique.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Quand les candidatures seront-elles officiellement ouvertes ?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Les inscriptions seront ouvertes immédiatement après la présentation officielle des clubs à l'école. En cliquant sur le bouton « Postuler », tu peux t'inscrire dès maintenant sur la liste prioritaire pour recevoir le lien direct dès son activation !
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Grand CTA Banner with the Placeholder Apply Button
+       ========================================================================== -->
+  <section class="cta-banner-section">
+    <div class="container">
+      <div class="cta-banner-card">
+        <div class="pulse-badge" style="margin-bottom: 24px;">
+          <span class="pulse-dot"></span>
+          <span>CAMPAGNE OFFICIELLE DE RECRUTEMENT 2026-2027</span>
+        </div>
+
+        <h2 class="cta-title">Prêt à Façonner le Futur Technique de l'ECC ?</h2>
+        <p class="cta-subtitle">
+          Rejoins une équipe soudée de 29 ingénieurs passionnés, construis des projets grandeur nature et booste ton profil technique dès aujourd'hui.
+        </p>
+
+        <div class="cta-buttons-wrap">
+          <!-- MAIN PLACEHOLDER APPLICATION BUTTON -->
+          <button class="btn btn-primary btn-lg btn-glow js-open-apply-modal" id="footer-main-apply-btn">
+            <span>🚀 Déposer ma Candidature pour le Mandat 2026-2027</span>
+          </button>
+          <a href="#poles" class="btn btn-secondary btn-lg">
+            <span>Explorer les 4 Pôles</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="brand-logo">
+            <div class="logo-badge">CT</div>
+            <div class="brand-text">
+              <span class="brand-title">CENTRALETECH</span>
+              <span class="brand-sub">École Centrale Casablanca</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            Hub d'Innovation & de Prototypage de l'École Centrale Casablanca.<br>
+            Mandat 2026-2027 sous la présidence de Anwar Mounir.<br>
+            <em>The new road to your TECH-PRO world.</em>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Les 4 Pôles</h4>
+          <ul class="footer-links-list">
+            <li><a href="#poles" class="footer-link">Robotique & FabLab</a></li>
+            <li><a href="#poles" class="footer-link">Data & IA</a></li>
+            <li><a href="#poles" class="footer-link">Design & Dev Web</a></li>
+            <li><a href="#poles" class="footer-link">Cybersécurité</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero" class="footer-link">Accueil</a></li>
+            <li><a href="#ecosystem" class="footer-link">Pourquoi Nous ?</a></li>
+            <li><a href="#roadmap" class="footer-link">Feuille de Route</a></li>
+            <li><a href="#team" class="footer-link">Organigramme</a></li>
+            <li><a href="#faq" class="footer-link">FAQ Recrutement</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact & École</h4>
+          <ul class="footer-links-list">
+            <li style="color: var(--text-muted); font-size: 0.88rem;">Fondation École Centrale Casablanca</li>
+            <li style="color: var(--text-muted); font-size: 0.88rem;">Ville Verte Côté Latéral Est, Bouskoura</li>
+            <li><a href="mailto:anwar.mounir@centrale-casablanca.ma" class="footer-link">anwar.mounir@centrale-casablanca.ma</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026-2027 CentraleTech — École Centrale Casablanca. Tous droits réservés.</div>
+        <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--cyan);">
+          Build with engineering passion • Mandat 2026-2027
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       APPLICATION PLACEHOLDER MODAL (Interactive & Ready for Google Form URL)
+       ========================================================================== -->
+  <div class="modal-overlay" id="apply-modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button class="modal-close-btn" aria-label="Fermer la fenêtre">✕</button>
+
+      <div class="modal-status-pill">
+        <span>⚡ OUVERTURE IMMINENTE</span>
+      </div>
+
+      <h2 class="modal-title">Candidatures CentraleTech</h2>
+      <p class="modal-desc">
+        Le formulaire officiel de recrutement pour le mandat 2026-2027 sera activé très prochainement lors de la présentation générale des clubs à l'École Centrale Casablanca.
+      </p>
+
+      <div class="modal-notify-box">
+        <form id="modal-notify-form">
+          <div class="form-group">
+            <label for="applicant-name" class="form-label">Prénom & Nom</label>
+            <input type="text" id="applicant-name" class="form-input" placeholder="Ex: Karim Bennani" required>
+          </div>
+
+          <div class="form-group">
+            <label for="applicant-email" class="form-label">Adresse Email ECC</label>
+            <input type="email" id="applicant-email" class="form-input" placeholder="prenom.nom@centrale-casablanca.ma" required>
+          </div>
+
+          <div class="form-group">
+            <label for="modal-pole-select" class="form-label">Pôle Technique Privilégié</label>
+            <select id="modal-pole-select" class="form-select">
+              <option value="Robotique">🤖 Pôle Robotique & Mini-FabLab</option>
+              <option value="Data & IA">🧠 Pôle Data & Intelligence Artificielle</option>
+              <option value="Design & Dev Web">💻 Pôle Design & Développement Web</option>
+              <option value="Cybersécurité">🛡️ Pôle Cybersécurité</option>
+              <option value="Tous les Pôles">Indécis(e) / Découverte</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-glow" style="width: 100%; margin-top: 10px;">
+            <span>🔔 M'avertir en Avant-Première dès l'Ouverture</span>
+          </button>
+        </form>
+
+        <div id="form-feedback" class="form-feedback-msg"></div>
+      </div>
+
+      <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center;">
+        💡 <em>Note : Les entretiens débuteront immédiatement après la clôture des candidatures. Aucun prérequis technique bloquant n'est exigé.</em>
+      </p>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Image Lightbox Modal (For Zooming Pole Slides & Organigramme)
+       ========================================================================== -->
+  <div class="lightbox-modal" id="image-lightbox">
+    <button class="modal-close-btn lightbox-close" style="position: fixed; top: 25px; right: 30px; z-index: 2600;">✕</button>
+    <img src="" alt="Aperçu Agrandie" class="lightbox-img" id="lightbox-zoom-img">
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
