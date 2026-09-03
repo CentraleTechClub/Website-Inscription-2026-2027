@@ -20,22 +20,13 @@ Ce site a été conçu pour présenter aux élèves-ingénieurs (en particulier 
 
 ---
 
-## ⚡ Bouton Placeholder de Candidature : Comment brancher le vrai formulaire
+## ⚡ Formulaire Officiel de Candidature
 
-Le site est équipé d'un système intelligent de bouton de candidature.
+Le formulaire de candidature pour le mandat 2026-2027 est branché en direct sur la plateforme :
 
-Dans `app.js`, à la ligne 12, se trouve la configuration globale :
-
-```javascript
-window.APPLICATION_CONFIG = {
-  isLive: false, // Passer à true dès que le formulaire est prêt !
-  formUrl: 'https://forms.gle/CentraleTechCandidature2026', // Coller le lien réel du Google Form ici
-  mandateYear: '2026-2027'
-};
-```
-
-- **Tant que `isLive: false`** : Un clic sur n'importe quel bouton de candidature (*Postuler au Club*, *Rejoindre la Robotique*, etc.) ouvre une boîte de dialogue interactive *"Candidatures Bientôt Ouvertes"* avec notification prioritaire pour les candidats.
-- **Dès que `isLive: true`** : Tous les boutons redirigent instantanément et directement vers le lien de candidature Google Form ou Typeform fourni !
+- **Lien officiel :** [Microsoft Forms CentraleTech](https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=eF-Del-2XEmV2BIjjDk9eiSMIvigBCxFiZrnXrNQQRRUOVRHVVczU0ZSNFU5RkdISkM4Szc0VDZQSy4u)
+- **QR Code mobile :** Disponible dans `assets/images/qr_code_candidature.png` et affiché sur la bannière d'inscription.
+- **Configuration dans `app.js` :** `window.APPLICATION_CONFIG.isLive = true`. Tous les boutons du site redirigent directement vers le formulaire.
 
 ---
 
