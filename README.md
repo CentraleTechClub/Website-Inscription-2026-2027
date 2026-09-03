@@ -13,7 +13,7 @@ Ce site a été conçu pour présenter aux élèves-ingénieurs (en particulier 
 
 | Pôle | Leads & Mentors | Spécialités & Chantiers Clés | Stack Technique |
 | :--- | :--- | :--- | :--- |
-| **🤖 Robotique & FabLab** | Ahmad Moubarak TIEMTORE (Lead)<br>Yahya BARHOUN (Co-Lead)<br>Imane EL BANNOUNI | Conception CAO, Impression 3D / Découpe Laser, PCB KiCAD, Filtres de Kalman, Compétitions ARB & TechDay | ROS 2, C/C++, Python, KiCAD, SolidWorks, Fusion 360, STM32 |
+| **🤖 Robotique & FabLab** | Ahmad Moubarak TIEMTORE (Lead)<br>Yahya BARHOUN (Co-Lead)<br>Imane EL BANNOUNI | Conception CAO, Impression 3D / Découpe Laser, PCB KiCAD, Filtres de Kalman, Compétitions Nationales & TechDay | ROS 2, C/C++, Python, KiCAD, SolidWorks, Fusion 360, STM32 |
 | **🧠 Data & IA** | Mouad EL KHAILI (Lead)<br>Allaoui Mohamed El MEHDI (Co-Lead)<br>Mame Lesse FAYE, Hadri Ahmed AMINE, Sennah HAMZA | Séries temporelles (ARIMA, LSTM), Modèles prédictifs boursiers, Pipelines RAG, Datathons & Hackathons IA | Python, PyTorch, TensorFlow, Scikit-Learn, LangChain, Hugging Face |
 | **💻 Design & Dev Web** | Aymen LAOUINA (Lead)<br>Zhour MESKOUR (Co-Lead)<br>Cheikh Ahmed Tidiane Sarr NDIAYE | Plateforme boursière temps réel (Mock Trading), WebSockets, Sprints Open-Source, Design Systems & UI/UX | TypeScript, React, Next.js, Node.js, WebSockets, TailwindCSS, Figma |
 | **🛡️ Cybersécurité** | Elise COULIBALY (Lead)<br>Imad ZOUHAIR (Co-Lead)<br>Yeints Andi LANKOUANDE, Ivan Emmanuel MALEU | Sécurité offensive & défensive, Compétitions CTF (Capture The Flag), Pentesting OWASP, Audits de code, Hardening | Kali Linux, Wireshark, Burp Suite, Metasploit, Ghidra, Docker |
