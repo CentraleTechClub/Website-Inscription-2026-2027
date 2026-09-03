@@ -1007,8 +1007,8 @@ img {
 
 .team-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
   margin-bottom: 40px;
 }
 

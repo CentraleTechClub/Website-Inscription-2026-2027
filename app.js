@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initBackgroundCanvas();
   initPoleFilter();
-  initApplicationModal();
   initLightbox();
   initFaqAccordion();
 });
@@ -162,95 +161,6 @@ function initPoleFilter() {
       });
     });
   });
-}
-
-// ==========================================================================
-// 4. Application Placeholder Modal & Handlers
-// ==========================================================================
-function initApplicationModal() {
-  const modal = document.getElementById('apply-modal');
-  const closeBtn = document.querySelector('.modal-close-btn');
-  const triggerBtns = document.querySelectorAll('.js-open-apply-modal');
-  const poleSelect = document.getElementById('modal-pole-select');
-  const notifyForm = document.getElementById('modal-notify-form');
-  const feedbackMsg = document.getElementById('form-feedback');
-
-  function openModal(preselectedPole = '') {
-    // If Admin enabled live URL, directly redirect to real form
-    if (window.APPLICATION_CONFIG.isLive && window.APPLICATION_CONFIG.formUrl) {
-      window.open(window.APPLICATION_CONFIG.formUrl, '_blank');
-      return;
-    }
-
-    if (poleSelect && preselectedPole) {
-      poleSelect.value = preselectedPole;
-    }
-
-    if (modal) {
-      modal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-  }
-
-  function closeModal() {
-    if (modal) {
-      modal.classList.remove('open');
-      document.body.style.overflow = '';
-      if (feedbackMsg) feedbackMsg.style.display = 'none';
-    }
-  }
-
-  triggerBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const pole = btn.getAttribute('data-pole') || '';
-      openModal(pole);
-    });
-  });
-
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
-    });
-  }
-
-  // Escape key closes modal
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal && modal.classList.contains('open')) {
-      closeModal();
-    }
-  });
-
-  // Handle early-access alert notification submission
-  if (notifyForm) {
-    notifyForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('applicant-name')?.value || '';
-      const email = document.getElementById('applicant-email')?.value || '';
-      const pole = poleSelect?.value || 'Général';
-
-      // Store in local storage for demonstration / persistence
-      try {
-        const stored = JSON.parse(localStorage.getItem('centraletech_waitlist') || '[]');
-        stored.push({ name, email, pole, date: new Date().toISOString() });
-        localStorage.setItem('centraletech_waitlist', JSON.stringify(stored));
-      } catch (err) {
-        console.log('Saved lead:', { name, email, pole });
-      }
-
-      if (feedbackMsg) {
-        feedbackMsg.textContent = `Merci ${name || 'futur CentraleTechien'} ! Ton intérêt pour le pôle [${pole}] est bien enregistré. Tu recevras le formulaire dès sa mise en ligne !`;
-        feedbackMsg.style.display = 'block';
-      }
-
-      notifyForm.reset();
-      setTimeout(() => {
-        closeModal();
-      }, 3500);
-    });
-  }
 }
 
 // ==========================================================================
